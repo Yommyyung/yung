@@ -1,0 +1,229 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;   
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font: 1.5rem "Nunito", sans-serif;
+    min-height: 100vh;
+    background-color: #474747;
+    background-image: radial-gradient(whitesmoke, #474747);
+    display: flex; 
+    flex-direction: column; 
+}
+
+.nowrap{
+    white-space: nowrap;
+}
+
+header, footer{
+    position: sticky;
+    background-color: #1e293b;
+    color: whitesmoke;
+    text-align: center;
+}
+
+header{
+    top: 0;
+    cursor: context-menu;
+}
+
+nav{
+    background-color: #fff;
+    padding: 0.5rem;
+    border-bottom: 2px solid #000;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+a, a:visited{
+    color: #000;
+}
+
+a:hover, a:focus{
+    color: hsla(0, 0%, 20%, 0.6);
+}
+
+main{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+footer{
+    bottom: 0;
+}
+
+.cad{
+    scroll-margin-top: 8rem;
+    width: min(100%, 350px);
+    background-color: #cbd5e1;
+    border: 2px solid #000;
+    border-radius: 15px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cad figure{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.cad img{
+    border: 5px solid #333;
+    border-radius: 50%;
+}
+
+.cad figcaption{
+    font-weight: bolder;
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+.cad p{
+    color: grey;
+}
+
+@media screen and (min-width: 576px) {
+    
+     body{
+        background-color: green;
+        background-image: radial-gradient(whitesmoke, green);
+    }main{
+        justify-content: center;
+        flex-flow: row wrap;
+        padding:1rem ;
+    }
+
+    .cad{
+        width: min(100%, 400px);
+    }
+
+    .cad:last-child{
+        order: -1;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body{
+        background-color: gold;
+        background-image: radial-gradient(whitesmoke, gold);
+    }
+    nav{
+        display: none;
+    }
+    
+    .cad{
+        width: min(100%, 325px);
+    }
+
+    .cad figure{
+        flex-flow: column-reverse;
+    }
+
+    .cad figcaption{
+        margin: 0.1em 0;
+    }
+
+    .cad p{
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (min-width: 992px){
+    body{
+       background-color: firebrick;
+       background-image: radial-gradient(whitesmoke, firebrick);
+    }
+
+    .cad{
+        width: min(100%, 400px);
+    }
+
+    .cad:nth-child(2){
+        order: -1;
+    }
+    
+}
+
+@media screen and (min-width: 1200px){
+    body{
+        background-color: rebeccapurple;
+        background-image: radial-gradient(whitesmoke, rebeccapurple);
+     }
+    .cad{
+        width: min(calc(33% - 1rem), 500px);
+    }   
+} 
+
+@media screen and (max-height: 425px)and (min-aspect-ratio: 7/4){
+    body{
+        background-color: dodgerblue;
+        background-image: radial-gradient(whitesmoke, dodgerblue);
+     }
+
+     h1, h2{
+        font-size: 1.5rem;
+     }
+
+     nav{
+        display: none;
+     }
+}
+
+ /* .cad{
+    scroll-margin-top: 8rem ;
+    width: min(100%, 350px);
+    background-color: #cbd5e1;
+    border: 2px solid #000;
+    border-radius: 15px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }     
+
+ .cad figure{
+    flex-direction: column nowrap;
+ }
+
+ .cad img{
+    border: 5px double #333;
+    border-radius: 50%;
+ }
+
+ .cad figcaption{
+    font-weight: bolder;
+    font-size: 2rem;
+    margin: 1rem;
+    text-align: center;
+ }
+
+ @media screen and (min-width: 576px){
+    
+    nav{
+        display: none;
+    } 
+    main{
+        justify-content: center;
+    }  
+ } 
+
